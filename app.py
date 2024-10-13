@@ -8,8 +8,8 @@ def get_input():
     
     enrollment = request.args.get('enrollment', default='No enrollment provided',type=str)
     sem = request.args.get('sem', default='No SEM provided',type=str)  
-    return jsonify(fatch_res(enrollment=enrollment,sem=sem))
+    return jsonify(scrap(enrollment=enrollment,sem=sem))
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
